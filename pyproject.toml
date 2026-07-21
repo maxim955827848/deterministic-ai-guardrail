@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deterministic-ai-guardrail"
+version = "0.1.0"
+description = "A three-layer boundary that turns non-deterministic LLM output into deterministic, schema-validated, auditable state changes."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "deterministic-ai-guardrail contributors" }]
+keywords = ["llm", "pydantic", "guardrails", "structured-output", "validation", "determinism"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "pydantic>=2.5,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/maxim955827848/deterministic-ai-guardrail"
+Repository = "https://github.com/maxim955827848/deterministic-ai-guardrail"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,5 @@
+# Runtime dependency. See pyproject.toml for the authoritative spec.
+pydantic>=2.5,<3
+
+# Dev / test
+pytest>=8.0
