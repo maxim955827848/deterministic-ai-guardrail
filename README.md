@@ -6,6 +6,12 @@
 
 **Turn a non-deterministic LLM into a deterministic, schema-validated, auditable component.**
 
+> **About this project.** A standalone, generalized extraction of an architecture pattern from
+> [Ventute](https://ventute.com) — a production AI-driven business-simulation platform — distilled
+> into self-contained, runnable form. Published as a portfolio piece demonstrating production-grade
+> LLM guardrails and typed structured-output validation.
+> Author: [@maxim955827848](https://github.com/maxim955827848).
+
 A small, dependency-light reference implementation of the boundary that sits
 between a Large Language Model and your application state. The model proposes;
 this layer disposes. Same state in, same state out — every time — regardless of
