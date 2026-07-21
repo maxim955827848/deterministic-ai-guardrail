@@ -1,5 +1,9 @@
 # deterministic-ai-guardrail
 
+[![CI](https://github.com/maxim955827848/deterministic-ai-guardrail/actions/workflows/ci.yml/badge.svg)](https://github.com/maxim955827848/deterministic-ai-guardrail/actions/workflows/ci.yml)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 **Turn a non-deterministic LLM into a deterministic, schema-validated, auditable component.**
 
 A small, dependency-light reference implementation of the boundary that sits

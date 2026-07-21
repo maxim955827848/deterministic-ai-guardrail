@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  # Run the suite natively across supported Python versions.
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e '.[dev]'
+
+      - name: Run pytest
+        run: pytest
+
+  # Build the Docker image and run the exact test suite inside the container,
+  # proving the Dockerfile works end-to-end.
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build image
+        run: docker build -t deterministic-ai-guardrail .
+
+      - name: Run tests in container
+        run: docker run --rm deterministic-ai-guardrail
+
+      - name: Run the demo in container
+        run: docker run --rm deterministic-ai-guardrail python examples/demo.py
