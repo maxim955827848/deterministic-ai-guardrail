@@ -1,6 +1,6 @@
 # deterministic-ai-guardrail
 
-[![CI](https://github.com/maxim955827848/deterministic-ai-guardrail/actions/workflows/ci.yml/badge.svg)](https://github.com/maxim955827848/deterministic-ai-guardrail/actions/workflows/ci.yml)
+[![CI](https://github.com/m4xkushnir/deterministic-ai-guardrail/actions/workflows/ci.yml/badge.svg)](https://github.com/m4xkushnir/deterministic-ai-guardrail/actions/workflows/ci.yml)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
@@ -10,7 +10,7 @@
 > [Ventute](https://ventute.com) — a production AI-driven business-simulation platform — distilled
 > into self-contained, runnable form. Published as a portfolio piece demonstrating production-grade
 > LLM guardrails and typed structured-output validation.
-> Author: [@maxim955827848](https://github.com/maxim955827848).
+> Author: [@m4xkushnir](https://github.com/m4xkushnir).
 
 A small, dependency-light reference implementation of the boundary that sits
 between a Large Language Model and your application state. The model proposes;
@@ -18,10 +18,10 @@ this layer disposes. Same state in, same state out — every time — regardless
 how creatively the model misbehaves.
 
 ```
-        ┌──────────────┐   raw text   ┌───────── the guardrail ─────────┐
-        │     LLM      │ ───────────► │  1. parse   2. validate   3. apply │ ──► trusted state
-        │ (untrusted)  │              │   JSON       Pydantic     clamps    │      + audit log
-        └──────────────┘              └────────────────────────────────────┘
+        ┌──────────────┐   raw text   ┌─────────── the guardrail ────────────┐
+        │     LLM      │ ───────────► │  1. parse   2. validate   3. apply   │ ──► trusted state
+        │ (untrusted)  │              │     JSON       Pydantic     clamps   │      + audit log
+        └──────────────┘              └──────────────────────────────────────┘
 ```
 
 ---
@@ -148,7 +148,7 @@ deterministic-ai-guardrail/
 Requires **Python 3.11+**.
 
 ```bash
-git clone https://github.com/maxim955827848/deterministic-ai-guardrail.git
+git clone https://github.com/m4xkushnir/deterministic-ai-guardrail.git
 cd deterministic-ai-guardrail
 
 python -m venv .venv && source .venv/bin/activate

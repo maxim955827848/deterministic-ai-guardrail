@@ -27,8 +27,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/maxim955827848/deterministic-ai-guardrail"
-Repository = "https://github.com/maxim955827848/deterministic-ai-guardrail"
+Homepage = "https://github.com/m4xkushnir/deterministic-ai-guardrail"
+Repository = "https://github.com/m4xkushnir/deterministic-ai-guardrail"
 
 [tool.setuptools.packages.find]
 where = ["src"]
